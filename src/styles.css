@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-size: 12px;
+}
+
+.site-logo{
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color:aliceblue;
+    color: green;
+}
+.nav-link{
+    text-transform: uppercase;
+    color: green;
+}

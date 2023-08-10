@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="col-sm-6 mx-auto">
+<div class="container" align = "center">
+    <h3>Add your Blog Here....</h3>
+</div>
+<form class="container" [formGroup]="addBlog">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Blog Title</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      formControlName="title">
+    </div>
+    <div class="mb-3">
+        <label for="comment" class="form-label">Content</label>
+        <textarea type="textarea" style="height: 150px;" class="form-control" id="content"
+          formControlName="comment"></textarea>
+        </div>
+    <button type="submit" class="btn btn-primary" (click)= "OnSumbit()">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div id="outerdiv" class="col-sm-6 mx-auto container my-3">
+    <div>
+        <h3>Recent Blog Here...</h3>
+    </div>
+<div *ngFor="let item of items" class="card mb-3 bg-warning p-3">
+ <p>{{item.title}}</p>
+ <p>{{item.comment | slice:0:10}}<span><a [routerLink]="['blogs',item.blog_id]">...show all</a></span>
+</p>
+ <br>
+</div>
+</div>

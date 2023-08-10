@@ -1,0 +1,11 @@
+header{
+    height: 100px;
+}
+.site-logo{
+    font-size: 1.5em;
+}nav{
+    background-color: lightgray
+}
+.nav-link{
+    text-transform: uppercase;
+}
