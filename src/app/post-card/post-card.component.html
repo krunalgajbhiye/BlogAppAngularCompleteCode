@@ -2,14 +2,13 @@
 <app-navbar></app-navbar>
 <div  id="outerdiv" class="col-sm-6 mx-auto container my-3">
     <div>
-        <h3 style="background-color: aquamarine;">{{blog.title}}</h3>
+        <h3 style="background-color: aquamarine;text-transform:uppercase;"><B>{{blog.title}}</B></h3>
     </div>
 <div class="card mb-3 bg-warning p-3">
-    <p style="border: 10cm;"></p>
-    <p>{{blog.title}}</p>
-    <p>{{blog.comment}}
-</p>
-<div *ngFor="let item of content">
+    <p><B>Blog Content : {{blog.comment}}</B></p>
+</div>
+<h3>comments</h3>
+<div *ngFor="let item of content" style="color:aqua background-attachment"> 
     <p>{{item.content}}</p>
 </div>
 <form class="container" [formGroup]="addComment">
@@ -20,7 +19,7 @@
         </div>
     <!-- <button type="submit" class="btn btn-primary" (click)= "OnSumbit()">Submit</button> -->
 
-<button class="btn btn-primary" (click)= "OnSumbit()">Add Comment</button>
+<button class="btn btn-primary" (click)= "OnSumbit() "><a [routerLink]="['blogs',blog.blog_id]"></a>Add Comment</button>
 </form>
-</div>
+
 </div>

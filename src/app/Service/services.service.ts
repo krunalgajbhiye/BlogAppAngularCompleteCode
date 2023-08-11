@@ -65,17 +65,21 @@ export class ServicesService {
     let headers = new HttpHeaders().set("Authorization",`Bearer ${localStorage.getItem('token')}`)
     console.log(headers);
     return this.http.get<any>("http://localhost:8082/blog/"+id,{headers});
+   
+    
 
   }
 
   sendComment(data : any,id:any){
     let headers = new HttpHeaders().set("Authorization",`Bearer ${localStorage.getItem('token')}`)
-    this.http.post("http://localhost:8082/comments/"+id,data,{headers}).subscribe(
-      (data)=>{
+    return this.http.post("http://localhost:8082/comments/"+id,data,{headers}).subscribe(
+      (hey)=>{
       console.log('Data Sent Successfully');
+      this.navigate.navigateByUrl("/home");
+    // this.navigate.navigateByUrl.bind("home/blogs/"+id);
       // this.items = data
       // console.log(this.items);
-      this.navigate.navigateByUrl("home/blogs/"+id);
+      return hey;
     },
     (error)=>{
       console.log('Some error Occurd');
